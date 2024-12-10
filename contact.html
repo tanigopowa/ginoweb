@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gino's Web - Contact</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/ame.gif" alt="Gino's Website" id="logo-img">
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="OpenThis.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="music.html">My Music</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Contact Me</h1>
+      <p>If you really have questions you can reach out to me in my social media on this homepage!</p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Form (Not Working)</h2>
+    <form onsubmit="handleFakeSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p>Message Sent!</p>
+      <button onclick="closePopup()" class="close-btn">×</button>
+    </div>
+  </div>
+
+  <section class="back-button">
+    <button onclick="window.history.back()">Go Back</button>
+  </section>
+  
+  <footer class="footer">
+    <p>&copy; 2024 Gino's Website. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function handleFakeSubmit(event) {
+      event.preventDefault();
+      document.getElementById("popup").style.visibility = "visible";
+      document.getElementById("popup").style.opacity = "1";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.visibility = "hidden";
+      document.getElementById("popup").style.opacity = "0";
+    }
+  </script>
+</body>
+</html>

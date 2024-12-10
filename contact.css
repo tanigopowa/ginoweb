@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body {
+    background-color: #292827;
+    color: #0fafe0;
+    background-image: url('images/wave.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s ease-in-out;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0fafe0;
+    box-shadow: 0 15px 10px rgba(13, 124, 175, 0.6);
+  }
+  
+  header .logo {
+    position: absolute;
+    left: 20px;
+  }
+  
+  header .logo img {
+    height: 50px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #5936b9;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  nav ul li a:hover {
+    transform: translateY(-10px);
+    color: #e92939;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: #1c3072;
+    background: rgba(15, 175, 224, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .contact-form {
+    background-color: #8c91d3;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form h2 {
+    color: #3664b9;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    color: #0f5d75;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0fafe0;
+    border-radius: 5px;
+    background-color: #292827;
+    color: #e0e0e0;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #e92939;
+  }
+  
+  .contact-form .submit-btn {
+    background-color: #e92939;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form .submit-btn:hover {
+    background-color: #c71e32;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+  
+  .popup-content {
+    background-color: #1e416e;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: -50px;
+    right: -32px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #e92939;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .back-button {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
+  button {
+    background-color: #131461;
+    color: #2e8cda;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, transform 0.3s;
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
+  button:hover {
+    transform: translateY(-10px);
+    background-color: #0d1349;
+  }
+
+  footer {
+    background-image: url('images/wave.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 20px;
+    background-color: #202299;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInUp 2s ease-in-out;
+  }
